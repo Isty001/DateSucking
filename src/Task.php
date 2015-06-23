@@ -5,7 +5,6 @@ namespace Date;
 class Task extends Person
 {
     protected $deadline;
-    protected $timezone;
 
     public function __construct(Person $person)
     {
@@ -15,6 +14,8 @@ class Task extends Person
     public function createTask($date, $timeArray)
     {
         $this->deadline = new \DateTime($date);
-        $this->deadline->setTimezone(new \DateTimeZone($this->timezone))->setTime($timeArray['hour'], $timeArray['minute']);
+        $this->deadline
+            ->setTimezone(new \DateTimeZone($this->timezone))
+            ->setTime($timeArray['hour'], $timeArray['minute']);
     }
 }

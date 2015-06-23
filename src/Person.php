@@ -2,7 +2,7 @@
 
 namespace Date;
 
-class AbstractPerson
+class Person
 {
     private $timezone;
     private $deadline;
@@ -12,9 +12,10 @@ class AbstractPerson
         $this->timezone = $timezone;
     }
 
-    public function setTaskDeadline(\DateTime $deadline)
+    public function setTaskDeadline($date, $timeArray)
     {
-        $this->deadline = $deadline;
+        $this->deadline = new \DateTime($date);
+        $this->deadline->setTimezone(new \DateTimeZone($this->timezone))->setTime($timeArray['hour'], $timeArray['minute']);
     }
 
     public function getTaskDeadline()
@@ -22,7 +23,7 @@ class AbstractPerson
         return $this->deadline;
     }
 
-    public function returnConvertedTimezone(AbstractPerson $person)
+    public function returnConvertedTimezone(Person $person)
     {
         $deadline = $person->getTaskDeadline();
         return $deadline->setTimezone(new \DateTimeZone($this->timezone));

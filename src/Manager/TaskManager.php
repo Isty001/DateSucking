@@ -49,7 +49,7 @@ class TaskManager
             }
             $counter++;
         }
-        print_r($this->taskList);
+        return $this->taskList;
     }
 
     public function getTaskItems()

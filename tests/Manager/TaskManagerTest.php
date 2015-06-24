@@ -12,12 +12,12 @@ class TaskManagerTest extends \PHPUnit_Framework_TestCase
     public function testTaskManager()
     {
 
-//        $taskManager->saveTask($task);
-
         $person = new Person('MásValaki', 'America/New_York');
         $deadline = ['date' => '2015-08-01', 'hour' => 14, 'minute' => 55];
         $task = new Task('Feladat', 'Isty', $deadline);
         $task->setAuthor($person);
+//        $taskManager->saveTask($task);
+
 
         $taskManager = new TaskManager();
 

@@ -15,7 +15,7 @@ class TaskManager
         $authorData = $task->getAuthor();
         $taskDeadline = $task->setDeadline();
 
-        $file = '/home/farkasvolgyi.istvan/PhpstormProjects/DateSucking/src/Documents/tasks.txt';
+        $file = dirname(__DIR__) . '/Documents/tasks.txt';
         $text = "\n----------\nTask name: " . $task->getTaskName() . PHP_EOL . 'Author name: ' . $authorData['authorName'] . PHP_EOL . 'Addressee: ' . $task->getAddressee() . PHP_EOL . 'Author timezone: ' . $authorData['timezone'] . PHP_EOL .
             'Deadline Day: ' . $taskDeadline->format('Y-m-d') . PHP_EOL . 'Deadline Time: ' . $taskDeadline->format('H:i') . PHP_EOL . '----------';
 
@@ -54,7 +54,7 @@ class TaskManager
 
     public function getTaskItems()
     {
-        $file = '/home/farkasvolgyi.istvan/PhpstormProjects/DateSucking/src/Documents/tasks.txt';
+        $file = dirname(__DIR__). '/Documents/tasks.txt';
         $this->taskItemList = file_get_contents($file);
 
         preg_match_all('|----------(.*)----------|sU', $this->taskItemList, $taskItems);

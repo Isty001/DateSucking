@@ -1,0 +1,33 @@
+
+----------
+Task name: Feladat
+Author name: Isty
+Addressee: MásValaki
+Author timezone: Asia/Hong_Kong
+Deadline Day: 2015-08-01
+Deadline Time: 14:55
+----------
+----------
+Task name: Feladat
+Author name: Isty
+Addressee: MásValaki
+Author timezone: Asia/Hong_Kong
+Deadline Day: 2015-08-01
+Deadline Time: 14:55
+----------
+----------
+Task name: Feladat
+Author name: MásValaki
+Addressee: Isty
+Author timezone: America/New_York
+Deadline Day: 2015-07-31
+Deadline Time: 14:55
+----------
+----------
+Task name: Feladat
+Author name: MásValaki
+Addressee: Isty
+Author timezone: America/New_York
+Deadline Day: 2015-07-31
+Deadline Time: 14:55
+----------

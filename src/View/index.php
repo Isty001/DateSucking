@@ -14,8 +14,10 @@ use Date\View\GenerateList;
     <body>
     <?php
         $generator = new GenerateList();
-        $generator->buildUp();
-        $generator->createList();
+
+        $person = 'MásValaki';
+        $timezone = 'America/New_York';
+        $generator->createList($generator->buildUp($person, $timezone));
     ?>
     </body>
 </html>

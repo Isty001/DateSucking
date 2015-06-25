@@ -15,13 +15,13 @@ use Date\Manager\TaskManager;
 class GenerateList
 {
 
-    public function buildUp($person, $timezone)
+    public function buildUp($addressee, $timezone)
     {
-        $person = new Person($person, $timezone);
+        $addressee = new Person($addressee, $timezone);
 
         $taskManager = new TaskManager();
 
-        return $taskManager->listTasksOf($person);
+        return $taskManager->listTasksOf($addressee);
     }
 
     public function createList($taskArray)
